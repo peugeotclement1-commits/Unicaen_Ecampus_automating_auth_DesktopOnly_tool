@@ -96,15 +96,6 @@ login_grid={
 }
 
 
-def log_ecampus(login_url):
-
-    ecampus=driver.find_element(By.PARTIAL_LINK_TEXT, "Ecampus")
-
-    ecampus.click()
-
-    global new_login_url
-    new_login_url=driver.current_url
-
 
 def log_ecampus2(login_url):
     
@@ -200,7 +191,7 @@ def access_third_auth(login_url):
      
 def main() -> None:
 
-    log_ecampus(login_url)
+    new_login_url=driver.current_url
 
     print(driver.current_url)
 
